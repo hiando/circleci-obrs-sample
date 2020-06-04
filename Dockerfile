@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get -y install apache2
 
 # Install apache and write hello world message
-RUN echo 'Hello World13!' > /var/www/html/index.html
+RUN echo 'Hello World Before!' > /var/www/html/index.html
 
 # Configure apache
 RUN echo '. /etc/apache2/envvars' > /root/run_apache.sh
@@ -17,4 +17,3 @@ RUN chmod 755 /root/run_apache.sh
 EXPOSE 80
 
 CMD /root/run_apache.sh
-
